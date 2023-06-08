@@ -1,5 +1,9 @@
 import './App.css';
 import NavBar from "./NavBar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 import { Switch, Route } from "react-router-dom";
 
 function App() {
@@ -7,18 +11,19 @@ function App() {
     <div>
       <NavBar/>
       <main>
+        Hi
         <Switch>
-          <Route path="/contact">
-
+          <Route exact path="/contact">
+            <Home />
           </Route>
-          <Route path="/projects">
-            
+          <Route exact path="/projects">
+            <About />
           </Route>
-          <Route path="/about">
-
+          <Route exact path="/about">
+            <Projects />
           </Route>
           <Route path="/">
-  
+            <Contact />
           </Route>      
         </Switch>
       </main>
